@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.grid-container{
+    display: grid;
+    
+    grid-template-areas: 'side header header header'
+                         'side three four four '
+                         'side three four four';
+    grid-template-columns:20% 1fr 3fr ;
+    grid-gap: 1em;
+    background-color: whitesmoke;
+    padding-bottom: 7em;
+    grid-template-rows: 1fr min-content;
+    grid-auto-flow:dense;
+}
+
+.item1{
+    grid-area: side;
+    height: 100vh;
+    padding: 1em 2em;
+    background-color: white;
+}
+
+.item2{
+    grid-area: header;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card1{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 20px;
+    border: 1px solid grey;
+}
+.card1 h1{
+    font-size: 25px;
+}
+.card_heading{
+    display: flex;
+    justify-content: space-between;
+}
+.item3{
+    grid-area: three;
+}
+
+.item4{
+    grid-area: four;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.chart{
+    background-color: white;
+    border-radius: 20px;
+    padding: 1em;
+    border: 1px solid grey;
+    
+}
+
+@media only screen and (max-width:1000px){
+    .item1{
+        display: none;
+    }
+    .item2{
+        flex-direction: column;
+    }
+    .grid-container{
+        grid-template-areas: ' header'
+                             'three'
+                             'four';
+                             
+                                grid-template-rows: 45rem 1fr;
+                                grid-template-columns: 100% 1fr 1fr ;
+        margin: 0 auto;
+        padding: 0 2em;
+    }
+}

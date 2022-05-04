@@ -1,0 +1,22 @@
+.upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+}
+.Sidebar__elements{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: "Poppins";
+}
+
+.Sidebar__elements select{
+    width: 100%;
+    height: 3vh;
+}
+.elements{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
